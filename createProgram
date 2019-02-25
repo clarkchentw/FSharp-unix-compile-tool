@@ -16,7 +16,7 @@ fi
 dotnet new console -lang F# -o $NAME
 dos2unix $NAME/*
 
-echo "" >> $NAME/compileAndRun
+echo "#!/bin/bash" >> $NAME/compileAndRun
 echo "" >> $NAME/compileAndRun
 echo "dotnet build" >> $NAME/compileAndRun
 echo "dotnet run" >> $NAME/compileAndRun
