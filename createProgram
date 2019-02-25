@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME=$1
+
+if [[ $# -ne 1 ]]
+then
+	echo "Usage: $0 [Program Name]"
+	exit
+fi
+
+if [ -d "$NAME" ] 
+then
+	echo "Directory $NAME already exist, please choose another program name"
+	exit
+fi
+
+dotnet new console -lang F# -o $NAME
+dos2unix $NAME/*
+
+echo "" >> $NAME/compileAndRun
+echo "" >> $NAME/compileAndRun
+echo "dotnet build" >> $NAME/compileAndRun
+echo "dotnet run" >> $NAME/compileAndRun
+chmod 700 $NAME/compileAndRun
+

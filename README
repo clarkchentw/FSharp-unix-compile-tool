@@ -1,0 +1,3 @@
+Syntax ./createProgram [ProgramName]
+
+ProgramName will be the directory that store the program you create
