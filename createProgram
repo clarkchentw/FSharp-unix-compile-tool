@@ -13,7 +13,10 @@ then
 	exit
 fi
 
+#Create environment
 dotnet new console -lang F# -o $NAME
+
+#Convert file from dos format to unix
 dos2unix $NAME/*
 
 echo "#!/bin/bash" >> $NAME/compileAndRun
